@@ -1,13 +1,15 @@
-import React from 'react';
+import React from "react";
 
 // Components
-import Item from './ShoppingCartItem';
+import Item from "./ShoppingCartItem";
 
 const ShoppingCart = props => {
 	const getCartTotal = () => {
-		return props.cart.reduce((acc, value) => {
-			return acc + value.price;
-		}, 0).toFixed(2);
+		return props.cart
+			.reduce((acc, value) => {
+				return acc + value.price;
+			}, 0)
+			.toFixed(2);
 	};
 
 	return (
